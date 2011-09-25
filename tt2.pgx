@@ -1,0 +1,4 @@
+# This is the Pegex grammar for tt2
+
+tt2:
+    /~Your grammar goes here~/
