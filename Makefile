@@ -1,15 +1,9 @@
+GRAMMAR = *.pgx
 export PERL5LIB=../pegex-pm/lib
+COMPILE_COMMAND = pegex compile --to=
+ALL = $(GRAMMAR).yaml $(GRAMMAR).json
 
-COMPILE_COMMAND = perl -MPegex::Compiler -e \
-    'print Pegex::Compiler->compile_raw(shift)->to_
+all: $(ALL)
 
-all: tt2.pgx.yaml tt2.pgx.json
-
-tt2.pgx.yaml: tt2.pgx Makefile
-	$(COMPILE_COMMAND)yaml' $< > $@
-
-tt2.pgx.json: tt2.pgx Makefile
-	$(COMPILE_COMMAND)json' $< > $@
-
-clean:
-	rm -f tt2.pgx.*
+$(ALL): $(GRAMMAR) Makefile
+	$(COMPILE_COMMAND)$(@:$<.%=%) $< > $@

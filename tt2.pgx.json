@@ -1,0 +1,6 @@
+{
+   "+top" : "tt2",
+   "tt2" : {
+      ".rgx" : "\\s*Your grammar goes here\\s*"
+   }
+}
