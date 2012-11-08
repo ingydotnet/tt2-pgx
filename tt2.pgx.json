@@ -1,6 +1,6 @@
 {
-   "+top" : "tt2",
+   "+toprule" : "tt2",
    "tt2" : {
-      ".rgx" : "\\s*Your grammar goes here\\s*"
+      ".rgx" : "\\s*Yourgrammargoeshere\\s*"
    }
 }
